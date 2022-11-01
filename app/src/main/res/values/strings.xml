@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">MP5MyFoodieApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="place_holder">Image holder</string>
+    <string name="Calories">Calories</string>
+    <string name="Ingredients">Ingredients</string>
+    <string name="Description">Description</string>
+    <string name="Food">Title</string>
+    <string name="food_name">Food Name</string>
+    <string name="add_food">Add Food</string>
+    <string name="food_description">Food Description</string>
+    <string name="food_ingredients">Food Ingredients</string>
+    <string name="food_calories">Food Calories</string>
+    <string name="link_to_online_recipe">Link to Online Recipe</string>
+
+<array name="item_images">
+    <item>@drawable/meatball</item>
+    <item>@drawable/mangu</item>
+    <item>@drawable/sancocho</item>
+    <item>@drawable/arrozcarne</item>
+    <item>@drawable/morirsonandorecipe</item>
+    <item>@drawable/condulce</item>
+    <item>@drawable/rusa</item>
+    <item>@drawable/longaniza</item>
+    <item>@drawable/pork</item>
+    <item>@drawable/locrio</item>
+</array>
+
+<array name="item_titles">
+    <item>MeatBall</item>
+    <item>Mangu</item>
+    <item>Sancocho</item>
+    <item>La Bandera</item>
+    <item>Morir Sonando</item>
+    <item>Habichuela con Dulce</item>
+    <item>Rusian Salad</item>
+    <item>Longaniza</item>
+    <item>Christmas Pork Roast</item>
+    <item>Locrio de Pollo</item>
+
+</array>
+
+<array name="item_descriptions">
+    <item>Ingredients: Chicken and Pork</item>
+    <item>Ingredients: Smash Platains</item>
+    <item>Ingredients: Soup, Corn, Chicken</item>
+    <item>Ingredients: Rice, chicken and beans</item>
+    <item>Ingredients: Orange Juice and Milk</item>
+    <item>Ingredients: Beans and cookies</item>
+    <item>Ingredients: Potato, Eggs and Carots</item>
+    <item>Ingredients: Pork chops or Pork shoulders</item>
+    <item>Ingredients: 12 pound Pork</item>
+    <item>Ingredients: Sesonning Rize and chicken</item>
+</array>
+
+<array name="item_ingredients">
+    <item>Ingredients: Eggs and Flour</item>
+    <item>Sides: Cheese or Onions</item>
+    <item>Ingredients: Dominican Style</item>
+    <item>Description: Main Dominican Food</item>
+    <item>Description: Freshy Juice</item>
+    <item>Description: Sweet Beans</item>
+    <item>Description: Ensalada Rusa</item>
+    <item>Ingredients: Meat Ingredients</item>
+    <item>Description: Christmas Pork!!</item>
+    <item>Ingredients: Chicken and Rice</item>
+</array>
+
+<array name="item_calories">
+    <item>Calories: 284 Calories</item>
+    <item>Calories: 1554 Calories</item>
+    <item>Calories: 961 Calories</item>
+    <item>Calories: 1784 Calories</item>
+    <item>Calories: 549 Calories</item>
+    <item>Calories: 553 Calories</item>
+    <item>Calories: 241 Calories</item>
+    <item>Calories: 278 Calories</item>
+    <item>Calories: 503 Calories</item>
+    <item>Calories: 1239 Calories</item>
+
+</array>
+
+<array name="item_links">
+    <item>https://www.spendwithpennies.com/easy-meatball-recipe/</item>
+    <item>https://micocinadominicana.com/como-hacer-mangu-dominicano/</item>
+    <item>https://www.dominicancooking.com/125/sancocho</item>
+    <item>https://www.thatsdominican.com/dr/our-food/arroz-habichuela-y-carne</item>
+    <item>https://www.dominicancooking.com/976/morir-sonando</item>
+    <item>https://www.dominicancooking.com/979/habichuelas-con-dulce</item>
+    <item>https://www.dominicancooking.com/ensalada-rusa-mixta-potato-salad</item>
+    <item>https://www.dominicancooking.com/longaniza-recipes-homemade-sausage</item>
+    <item>https://www.dominicancooking.com/puerco-asado-pernil-lechon-recipe</item>
+    <item>https://www.dominicancooking.com/locrio-pollo-dominican-chicken-rice</item>
+</array>
+</resources>
