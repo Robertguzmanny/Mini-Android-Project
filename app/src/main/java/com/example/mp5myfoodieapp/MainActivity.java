@@ -1,5 +1,9 @@
 package com.example.mp5myfoodieapp;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.Random;
+
 import static com.example.mp5myfoodieapp.R.array.item_calories;
 import static com.example.mp5myfoodieapp.R.array.item_descriptions;
 import static com.example.mp5myfoodieapp.R.array.item_images;
@@ -22,10 +28,12 @@ import static com.example.mp5myfoodieapp.R.array.item_titles;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private RecyclerView recyclerView;
     private ArrayList<MealItem> mData;
     private MealItemAdapter foodAdapter;
     private int gridColumnCount;
+    private BroadcastReceiver MyReceiver;
     MealItem currentFood;
     String[] itemTitle;
     String[] itemDescription;
@@ -34,10 +42,43 @@ public class MainActivity extends AppCompatActivity {
     String[] itemLink;
     TypedArray itemImage;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+
+
         setContentView(R.layout.activity_main);
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("com.example.home");
+        MyReceiver = new BroadcastReceiver(){
+            @Override
+            public void onReceive(Context context, Intent intent){
+                android.util.Log.d("MyReciever", "Broadcast Received");
+                Random ran = new Random();
+                int index = ran.nextInt(3);
+                String act = intent.getAction();
+                MealItem curMeal = mData.get(index);
+                Intent start = new Intent(context, DetailsActivity.class);
+                start.putExtra("Image_ID", curMeal.getImage());
+                start.putExtra("Title", curMeal.getTitle());
+                start.putExtra("Calories", curMeal.getCalories());
+                start.putExtra("Ingredients", curMeal.getIngredient());
+                start.putExtra("Description", curMeal.getDescription());
+                start.putExtra("Link", curMeal.getLink());
+                context.startActivity(start);
+                android.widget.Toast.makeText(context, "Happy Cooking " + curMeal.getTitle(), android.widget.Toast.LENGTH_LONG).show();
+//                android.util.Log.d(TAG, "index = " + index);
+
+            }
+        };
+        registerReceiver(MyReceiver, intentFilter);
+
+//        intentFilter.addAction();
+        registerReceiver(MyReceiver, intentFilter);
 
 
         recyclerView = findViewById(R.id.recycler_view);
@@ -61,7 +102,12 @@ public class MainActivity extends AppCompatActivity {
                 foodAdapter.addContent();
             }
         });
+
     }
+
+
+
+
 
     private void loadFoodsData() {
 
